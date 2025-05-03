@@ -84,11 +84,3 @@ We welcome contributions to enhance the platform! Please follow these guidelines
 3.  Make your changes and commit them with clear and concise messages.
 4.  Push your changes to your fork.
 5.  Submit a pull request with a detailed description of your changes.
-
-## License
-
-*[Specify the project license here]*
-
-## Contact
-
-*[Your contact information or project team email]*
