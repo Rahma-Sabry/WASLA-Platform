@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wasla", "Wasla\Wasla.csproj", "{4071703F-9412-4E0D-B464-2499A0D37BCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4071703F-9412-4E0D-B464-2499A0D37BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4071703F-9412-4E0D-B464-2499A0D37BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4071703F-9412-4E0D-B464-2499A0D37BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4071703F-9412-4E0D-B464-2499A0D37BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9954219-5102-4261-9694-35B92B3A2D07}
+	EndGlobalSection
+EndGlobal
