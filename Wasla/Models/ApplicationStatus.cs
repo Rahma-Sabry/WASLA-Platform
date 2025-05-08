@@ -9,7 +9,7 @@ namespace Wasla.Models
 
         [Required]
         [MaxLength(20)]
-        public string StatusName { get; set; }
+        public string? StatusName { get; set; }
         // Pending, Accepted, Rejected, Interviewing
     }
 }

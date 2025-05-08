@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Wasla.Models;
 
@@ -11,9 +12,11 @@ using Wasla.Models;
 namespace Wasla.Migrations
 {
     [DbContext(typeof(WaslaContext))]
-    partial class WaslaContextModelSnapshot : ModelSnapshot
+    [Migration("20250508081433_firstmig")]
+    partial class firstmig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -7,7 +7,6 @@ namespace Wasla.Models
     
     public class ApplicationHistory
     {
-        [Key]
         public int EmployeeId { get; set; }
 
         public int JobId { get; set; }

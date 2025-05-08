@@ -12,7 +12,7 @@ namespace Wasla.Models
         [Required(ErrorMessage = "University Name Can't be Empty")]
         [Display(Name = "University Name")]
         [StringLength(maximumLength: 50)]
-        public string UniversityName { get; set; }
+        public string? UniversityName { get; set; }
 
         public DateTime? EndDate { get; set; }
 

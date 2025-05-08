@@ -43,8 +43,8 @@ namespace Wasla.Models
             modelBuilder.Entity<Feedback>()
                 .HasKey(f => new { f.SenderId, f.ReceiverId, f.Time });
 
-            modelBuilder.Entity<Skill>().
-                HasKey(s => new { s.EmployeeId, s.SkillName });
+            modelBuilder.Entity<EmployeeSkill>().
+                HasKey(es => new { es.EmployeeId, es.SkillId });
 
             // TPT configuration
             modelBuilder.Entity<Employee>().ToTable("Employees");

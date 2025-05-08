@@ -7,14 +7,14 @@ namespace Wasla.Models
     {
 
         [Url]
-        public string Resume { get; set; }
+        public string? Resume { get; set; }
 
         [Url]
-        public string CoverLetter { get; set; }
+        public string? CoverLetter { get; set; }
 
         public ICollection<Education> EducationRecords { get; set; }
         public ICollection<Experience> Experiences { get; set; }
-        public ICollection<Skill> Skills { get; set; }
+        public ICollection<EmployeeSkill> EmployeeSkills { get; set; }
         public ICollection<Application> Applications { get; set; }
     }
 

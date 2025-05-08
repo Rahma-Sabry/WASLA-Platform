@@ -9,9 +9,9 @@ namespace Wasla.Models
 
         public DateTime Time { get; set; }
 
-        public int ProcessTypeId { get; set; }
+        public int? ProcessTypeId { get; set; }
 
-        public int Amount { get; set; }
+        public int? Amount { get; set; }
         public User User { get; set; }
 
         public ProcessType ProcessType { get; set; }
