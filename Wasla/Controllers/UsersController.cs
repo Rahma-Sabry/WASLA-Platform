@@ -37,7 +37,6 @@ namespace WaslaHiringPlatform.Controllers
         }
 
         // POST: Users/Create
-        // POST: Users/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(User user)
