@@ -5,6 +5,7 @@ namespace Wasla.Models
 {
     public class Recruiter : User
     {
+
         [Required(ErrorMessage = "Company Name Can't be Empty")]
         [Display(Name = "Company Name")]
         [StringLength(maximumLength: 50)]

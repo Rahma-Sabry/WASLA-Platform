@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\p c\\source\\repos\\Wasla\\Wasla\\Wasla.csproj": {}
+    "C:\\Users\\رحمه صبرى\\OneDrive\\سطح المكتب\\Waslaa\\Wasla\\Wasla.csproj": {}
   },
   "projects": {
-    "C:\\Users\\p c\\source\\repos\\Wasla\\Wasla\\Wasla.csproj": {
+    "C:\\Users\\رحمه صبرى\\OneDrive\\سطح المكتب\\Waslaa\\Wasla\\Wasla.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\p c\\source\\repos\\Wasla\\Wasla\\Wasla.csproj",
+        "projectUniqueName": "C:\\Users\\رحمه صبرى\\OneDrive\\سطح المكتب\\Waslaa\\Wasla\\Wasla.csproj",
         "projectName": "Wasla",
-        "projectPath": "C:\\Users\\p c\\source\\repos\\Wasla\\Wasla\\Wasla.csproj",
-        "packagesPath": "C:\\Users\\p c\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\p c\\source\\repos\\Wasla\\Wasla\\obj\\",
+        "projectPath": "C:\\Users\\رحمه صبرى\\OneDrive\\سطح المكتب\\Waslaa\\Wasla\\Wasla.csproj",
+        "packagesPath": "C:\\Users\\رحمه صبرى\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\رحمه صبرى\\OneDrive\\سطح المكتب\\Waslaa\\Wasla\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\p c\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\رحمه صبرى\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -42,9 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

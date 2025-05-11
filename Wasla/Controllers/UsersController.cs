@@ -67,6 +67,7 @@ namespace WaslaHiringPlatform.Controllers
             var user = await _context.Users.FindAsync(id);
             if (user == null)
                 return NotFound();
+            user.ValidatePassword = user.Password;
 
             return View(user);
         }
