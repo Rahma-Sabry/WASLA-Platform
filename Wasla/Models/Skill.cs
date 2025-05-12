@@ -13,7 +13,7 @@ namespace Wasla.Models
         [Display(Name = "Skill Name")]
         public string SkillName { get; set; }
 
-        public ICollection<EmployeeSkill> EmployeeSkills { get; set; }
+        public ICollection<EmployeeSkill>? EmployeeSkills { get; set; }
     }
 
 }
