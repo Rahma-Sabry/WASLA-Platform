@@ -75,7 +75,7 @@ namespace Wasla.Controllers
             return View(recruiter);
         }
 
-        // GET: Recruiter/Edit/5
+        //GET: Recruiter/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -90,6 +90,8 @@ namespace Wasla.Controllers
             }
             return View(recruiter);
         }
+
+
 
         // POST: Recruiter/Edit/5
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wasla")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e14726224a15ea0467131cf7121558212f2ef6a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb3daa56a78a309f5bb527ef2a2ae720f0f9d299")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wasla")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wasla")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
