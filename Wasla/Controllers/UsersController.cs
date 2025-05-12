@@ -97,14 +97,23 @@ namespace WaslaHiringPlatform.Controllers
             return View(user);
         }
 
-        // GET: Users/Delete/5
-        public async Task<IActionResult> Delete(int id)
-        {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null)
-                return NotFound();
 
-            return View(user);
+        // GIT: Users/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var recruiter = await _context.Recruiters
+                .FirstOrDefaultAsync(m => m.UserId == id);
+            if (recruiter == null)
+            {
+                return NotFound();
+            }
+
+            return View(recruiter);
         }
 
         // POST: Users/Delete/5
@@ -116,10 +125,15 @@ namespace WaslaHiringPlatform.Controllers
             if (user != null)
             {
                 _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
             }
 
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+        private bool UsersExists(int id)
+        {
+            return _context.Users.Any(e => e.UserId == id);
         }
     }
 }

@@ -75,56 +75,91 @@ namespace Wasla.Controllers
             return View(recruiter);
         }
 
-        //GET: Recruiter/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        ////GET: Recruiter/Edit/5
+        //public async Task<IActionResult> Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var recruiter = await _context.Recruiters.FindAsync(id);
-            if (recruiter == null)
-            {
+        //    var recruiter = await _context.Recruiters.FindAsync(id);
+        //    if (recruiter == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(recruiter);
+        //}
+
+
+
+        //// POST: Recruiter/Edit/5
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(int id, [Bind("CompanyName,CompanyDesc,UserId,FirstName,LastName,Email,SSN,Phone,Password,DateOfBirth,Coins")] Recruiter recruiter)
+        //{
+        //    if (id != recruiter.UserId)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        try
+        //        {
+        //            _context.Update(recruiter);
+        //            await _context.SaveChangesAsync();
+        //        }
+        //        catch (DbUpdateConcurrencyException)
+        //        {
+        //            if (!RecruiterExists(recruiter.UserId))
+        //            {
+        //                return NotFound();
+        //            }
+        //            else
+        //            {
+        //                throw;
+        //            }
+        //        }
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(recruiter);
+        //}
+        // GET: Users/Edit/5
+        public async Task<IActionResult> Edit(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
                 return NotFound();
-            }
-            return View(recruiter);
+            user.ValidatePassword = user.Password;
+
+            return View(user);
         }
 
-
-
-        // POST: Recruiter/Edit/5
-
+        // POST: Users/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CompanyName,CompanyDesc,UserId,FirstName,LastName,Email,SSN,Phone,Password,DateOfBirth,Coins")] Recruiter recruiter)
+        public async Task<IActionResult> Edit(User user)
         {
-            if (id != recruiter.UserId)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(recruiter);
+                    _context.Update(user);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!RecruiterExists(recruiter.UserId))
-                    {
+                    if (!_context.Users.Any(u => u.UserId == user.UserId))
                         return NotFound();
-                    }
                     else
-                    {
                         throw;
-                    }
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(recruiter);
+
+            return View(user);
         }
 
         // GET: Recruiter/Delete/5
