@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Wasla.Models
 {
@@ -13,7 +14,7 @@ namespace Wasla.Models
 
         [Display(Name = "Company Description")]
         public string CompanyDesc { get; set; }
-
+        [ValidateNever]
         public ICollection<Job> Jobs { get; set; }
     }
 

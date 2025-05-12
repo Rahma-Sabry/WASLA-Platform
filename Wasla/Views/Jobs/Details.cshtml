@@ -1,60 +1,36 @@
 ﻿@model Wasla.Models.Job
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Job Details";
 }
 
-<h1>Details</h1>
+<h2>Job Details</h2>
 
 <div>
-    <h4>Job</h4>
+    <h4>@Model.JobTitle</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.JobTitle)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.JobTitle)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Requirements)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Requirements)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Salary)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Salary)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TypeId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TypeId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Field)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Field)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ExpireDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ExpireDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Recruiter)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Recruiter.Email)
-        </dd>
+        <dt class="col-sm-2">Recruiter</dt>
+        <dd class="col-sm-10">@Model.Recruiter?.Name</dd>
+
+        <dt class="col-sm-2">Type</dt>
+        <dd class="col-sm-10">@Model.JobType?.Name</dd>
+
+        <dt class="col-sm-2">Field</dt>
+        <dd class="col-sm-10">@Model.Field</dd>
+
+        <dt class="col-sm-2">Requirements</dt>
+        <dd class="col-sm-10">@Model.Requirements</dd>
+
+        <dt class="col-sm-2">Salary</dt>
+        <dd class="col-sm-10">@Model.Salary</dd>
+
+        <dt class="col-sm-2">Expire Date</dt>
+        <dd class="col-sm-10">@Model.ExpireDate?.ToShortDateString()</dd>
     </dl>
 </div>
+
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.JobId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.JobId" class="btn btn-warning">Edit</a> |
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </div>

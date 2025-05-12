@@ -57,6 +57,14 @@ namespace Wasla.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CompanyName,CompanyDesc,FirstName,LastName,Email,SSN,Phone,Password,ValidatePassword,DateOfBirth,Coins")] Recruiter recruiter)
         {
+            foreach (var kv in ModelState)
+            {
+                foreach (var err in kv.Value.Errors)
+                {
+                    Console.WriteLine($"Field {kv.Key}: {err.ErrorMessage}");
+                }
+            }
+
             if (ModelState.IsValid)    //we changed from ModelState.IsValid (didn't valid model)to !ModelState.IsValid (this work)
             {
                 //recruiter.UserId = int.Parse(HttpContext.Session.GetString("UserId"));
