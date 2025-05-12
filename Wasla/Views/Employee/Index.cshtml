@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Wasla.Models.Employee>
+
+@{
+    ViewData["Title"] = "Employee List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Date of Birth</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.FirstName</td>
+                <td>@employee.LastName</td>
+                <td>@employee.Email</td>
+                <td>@employee.DateOfBirth.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a href="@Url.Action("Details", "Employees", new { id = employee.UserId })" class="btn btn-info">Details</a>
+                    <a href="@Url.Action("Edit", "Employees", new { id = employee.UserId })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Delete", "Employees", new { id = employee.UserId })" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
