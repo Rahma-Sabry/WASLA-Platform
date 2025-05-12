@@ -3,86 +3,102 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Wasla.Models;
-using Microsoft.AspNetCore.Http;
 
 namespace Wasla.Controllers
 {
-    public class EmployeeController : Controller
+    public class EmployeesController : Controller
     {
         private readonly WaslaContext _context;
 
-        public EmployeeController(WaslaContext context)
+        public EmployeesController(WaslaContext context)
         {
             _context = context;
         }
 
-        // GET: Employee
+        // GET: Employees
         public async Task<IActionResult> Index()
         {
+            HttpContext.Session.SetString("UserId", "1");
             return View(await _context.Employees.ToListAsync());
         }
 
-        // GET: Employee/Details/5
+        // GET: Employees/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null) return NotFound();
+            if (id == null)
+            {
+                return NotFound();
+            }
 
             var employee = await _context.Employees
-                .Include(e => e.EducationRecords)
-                .Include(e => e.Experiences)
-                .Include(e => e.EmployeeSkills)
-                .Include(e => e.Applications)
                 .FirstOrDefaultAsync(m => m.UserId == id);
-
-            if (employee == null) return NotFound();
-
-            return View(employee);
-        }
-
-        // GET: Employee/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Employee/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("FullName,Email,Password,Resume,CoverLetter")] Employee employee)
-        {
-            if (ModelState.IsValid)
+            if (employee == null)
             {
-                _context.Add(employee);
-                await _context.SaveChangesAsync();
-
-                // Save employee ID in session for later use
-                HttpContext.Session.SetInt32("EmployeeId", employee.UserId);
-
-                return RedirectToAction("Index", "Home");
+                return NotFound();
             }
 
             return View(employee);
         }
 
-        // GET: Employee/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        // GET: Employees/Create
+        public IActionResult Create()
         {
-            if (id == null) return NotFound();
+            return View();
+        }
 
-            var employee = await _context.Employees.FindAsync(id);
-            if (employee == null) return NotFound();
-
+        // POST: Employees/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Resume,CoverLetter,UserId,FirstName,LastName,Email,SSN,Phone,Password,ValidatePassword,DateOfBirth,Coins")] Employee employee)
+        {
+            foreach (var kv in ModelState)
+            {
+                foreach (var err in kv.Value.Errors)
+                {
+                    Console.WriteLine($"Field {kv.Key}: {err.ErrorMessage}");
+                }
+            }
+            if (ModelState.IsValid)
+            {
+                _context.Add(employee);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
             return View(employee);
         }
 
-        // POST: Employee/Edit/5
+        // GET: Employees/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var employee = await _context.Employees.FindAsync(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return View(employee);
+        }
+
+        // POST: Employees/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserId,FullName,Email,Password,Resume,CoverLetter")] Employee employee)
+        public async Task<IActionResult> Edit(int id, [Bind("Resume,CoverLetter,UserId,FirstName,LastName,Email,SSN,Phone,Password,ValidatePassword,DateOfBirth,Coins")] Employee employee)
         {
-            if (id != employee.UserId) return NotFound();
+            if (id != employee.UserId)
+            {
+                return NotFound();
+            }
 
             if (ModelState.IsValid)
             {
@@ -94,30 +110,38 @@ namespace Wasla.Controllers
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!EmployeeExists(employee.UserId))
+                    {
                         return NotFound();
+                    }
                     else
+                    {
                         throw;
+                    }
                 }
                 return RedirectToAction(nameof(Index));
+            }
+            return View(employee);
+        }
+
+        // GET: Employees/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var employee = await _context.Employees
+                .FirstOrDefaultAsync(m => m.UserId == id);
+            if (employee == null)
+            {
+                return NotFound();
             }
 
             return View(employee);
         }
 
-        // GET: Employee/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null) return NotFound();
-
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.UserId == id);
-
-            if (employee == null) return NotFound();
-
-            return View(employee);
-        }
-
-        // POST: Employee/Delete/5
+        // POST: Employees/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -126,9 +150,9 @@ namespace Wasla.Controllers
             if (employee != null)
             {
                 _context.Employees.Remove(employee);
-                await _context.SaveChangesAsync();
             }
 
+            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
