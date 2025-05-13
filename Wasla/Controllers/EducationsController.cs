@@ -21,22 +21,22 @@ namespace Wasla.Controllers
         // GET: Educations
         public async Task<IActionResult> Index()
         {
+            HttpContext.Session.SetString("EmployeeId", "14");
             var waslaContext = _context.Education.Include(e => e.DegreeType).Include(e => e.Employee);
+
             return View(await waslaContext.ToListAsync());
         }
 
         // GET: Educations/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details()
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var employeeIdStr = HttpContext.Session.GetString("EmployeeId");
+            int employeeId = int.Parse(employeeIdStr);
 
             var education = await _context.Education
                 .Include(e => e.DegreeType)
                 .Include(e => e.Employee)
-                .FirstOrDefaultAsync(m => m.EmployeeId == id);
+                .FirstOrDefaultAsync(m => m.EmployeeId == employeeId);
             if (education == null)
             {
                 return NotFound();
@@ -48,8 +48,9 @@ namespace Wasla.Controllers
         // GET: Educations/Create
         public IActionResult Create()
         {
+            HttpContext.Session.SetString("EmployeeId", "14");
             ViewData["DegreeId"] = new SelectList(_context.DegreeTypes, "Id", "DegreeName");
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "UserId", "Email");
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "UserId", "FullName");
             return View();
         }
 
@@ -58,34 +59,42 @@ namespace Wasla.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EmployeeId,StartDate,UniversityName,EndDate,DegreeId")] Education education)
+        public async Task<IActionResult> Create([Bind("StartDate,UniversityName,EndDate,DegreeId")] Education education)
         {
+            foreach (var kv in ModelState)
+            {
+                foreach (var err in kv.Value.Errors)
+                {
+                    Console.WriteLine($"Field {kv.Key}: {err.ErrorMessage}");
+                }
+            }
             if (ModelState.IsValid)
             {
+                education.EmployeeId = int.Parse(HttpContext.Session.GetString("EmployeeId"));
                 _context.Add(education);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             ViewData["DegreeId"] = new SelectList(_context.DegreeTypes, "Id", "DegreeName", education.DegreeId);
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "UserId", "Email", education.EmployeeId);
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "UserId", "FullName", education.EmployeeId);
             return View(education);
         }
 
         // GET: Educations/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int? EmployeeId, DateTime? StartDate)
         {
-            if (id == null)
+            if (EmployeeId == null || StartDate == null)
             {
                 return NotFound();
             }
 
-            var education = await _context.Education.FindAsync(id);
+            var education = await _context.Education.FindAsync(EmployeeId, StartDate);
             if (education == null)
             {
                 return NotFound();
             }
             ViewData["DegreeId"] = new SelectList(_context.DegreeTypes, "Id", "DegreeName", education.DegreeId);
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "UserId", "Email", education.EmployeeId);
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "UserId", "FullName", education.EmployeeId);
             return View(education);
         }
 
@@ -94,15 +103,21 @@ namespace Wasla.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("EmployeeId,StartDate,UniversityName,EndDate,DegreeId")] Education education)
+        public async Task<IActionResult> Edit(DateTime startDate, [Bind("StartDate,UniversityName,EndDate,DegreeId")] Education education)
         {
-            if (id != education.EmployeeId)
+            foreach (var kv in ModelState)
             {
-                return NotFound();
+                foreach (var err in kv.Value.Errors)
+                {
+                    Console.WriteLine($"Field {kv.Key}: {err.ErrorMessage}");
+                }
             }
-
             if (ModelState.IsValid)
             {
+                var employeeIdStr = HttpContext.Session.GetString("EmployeeId");
+
+                int employeeId = int.Parse(employeeIdStr);
+                education.EmployeeId = employeeId;
                 try
                 {
                     _context.Update(education);
@@ -110,26 +125,23 @@ namespace Wasla.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EducationExists(education.EmployeeId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    bool exists = await _context.Education.AnyAsync(e => e.EmployeeId == employeeId && e.StartDate == startDate);
+                    if (!exists) return NotFound();
+                    else throw;
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["DegreeId"] = new SelectList(_context.DegreeTypes, "Id", "DegreeName", education.DegreeId);
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "UserId", "Email", education.EmployeeId);
             return View(education);
         }
 
+
         // GET: Educations/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int? EmployeeId, DateTime? StartDate)
         {
-            if (id == null)
+            if (EmployeeId == null || StartDate == null)
             {
                 return NotFound();
             }
@@ -137,7 +149,7 @@ namespace Wasla.Controllers
             var education = await _context.Education
                 .Include(e => e.DegreeType)
                 .Include(e => e.Employee)
-                .FirstOrDefaultAsync(m => m.EmployeeId == id);
+                .FirstOrDefaultAsync(m => m.EmployeeId == EmployeeId);
             if (education == null)
             {
                 return NotFound();
@@ -149,9 +161,11 @@ namespace Wasla.Controllers
         // POST: Educations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed()
         {
-            var education = await _context.Education.FindAsync(id);
+            var employeeIdStr = HttpContext.Session.GetString("EmployeeId");
+            int employeeId = int.Parse(employeeIdStr);
+            var education = await _context.Education.FindAsync(employeeId);
             if (education != null)
             {
                 _context.Education.Remove(education);
