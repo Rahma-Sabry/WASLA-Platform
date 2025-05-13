@@ -1,0 +1,24 @@
+﻿@model Wasla.Models.EmployeeSkill
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Employee Skill Details</h1>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-2">Employee</dt>
+    <dd class="col-sm-10">@Model.Employee.FirstName @Model.Employee.LastName</dd>
+
+    <dt class="col-sm-2">Skill</dt>
+    <dd class="col-sm-10">@Model.Skill.SkillName</dd>
+
+    <dt class="col-sm-2">Years of Experience</dt>
+    <dd class="col-sm-10">@Model.YOE</dd>
+</dl>
+
+<div>
+    <a asp-action="Edit" asp-route-employeeId="@Model.EmployeeId" asp-route-skillId="@Model.SkillId" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

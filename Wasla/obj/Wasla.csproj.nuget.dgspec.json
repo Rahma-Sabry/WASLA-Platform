@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\رحمه صبرى\\Source\\Repos\\WASLA-Platform\\Wasla\\Wasla.csproj": {}
+    "C:\\Users\\Mariam Refaiy\\Desktop\\waslaeWED\\Wasla\\Wasla.csproj": {}
   },
   "projects": {
-    "C:\\Users\\رحمه صبرى\\Source\\Repos\\WASLA-Platform\\Wasla\\Wasla.csproj": {
+    "C:\\Users\\Mariam Refaiy\\Desktop\\waslaeWED\\Wasla\\Wasla.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\رحمه صبرى\\Source\\Repos\\WASLA-Platform\\Wasla\\Wasla.csproj",
+        "projectUniqueName": "C:\\Users\\Mariam Refaiy\\Desktop\\waslaeWED\\Wasla\\Wasla.csproj",
         "projectName": "Wasla",
-        "projectPath": "C:\\Users\\رحمه صبرى\\Source\\Repos\\WASLA-Platform\\Wasla\\Wasla.csproj",
-        "packagesPath": "C:\\Users\\رحمه صبرى\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\رحمه صبرى\\Source\\Repos\\WASLA-Platform\\Wasla\\obj\\",
+        "projectPath": "C:\\Users\\Mariam Refaiy\\Desktop\\waslaeWED\\Wasla\\Wasla.csproj",
+        "packagesPath": "C:\\Users\\Mariam Refaiy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mariam Refaiy\\Desktop\\waslaeWED\\Wasla\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\رحمه صبرى\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mariam Refaiy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

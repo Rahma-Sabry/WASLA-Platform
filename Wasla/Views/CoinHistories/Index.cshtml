@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Wasla.Models.CoinHistory>
+
+@{
+    ViewData["Title"] = "Coin History";
+}
+
+<h1>Coin History</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Entry</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Time</th>
+            <th>Process Type</th>
+            <th>Amount</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.User.FirstName @item.User.LastName</td>
+                <td>@item.Time.ToString("g")</td>
+                <td>@item.ProcessType.ProcessName </td>
+                <td>@item.Amount</td>
+                <td>
+                    <a asp-action="Edit" asp-route-userId="@item.UserId" asp-route-time="@item.Time">Edit</a> |
+                    <a asp-action="Details" asp-route-userId="@item.UserId" asp-route-time="@item.Time">Details</a> |
+                    <a asp-action="Delete" asp-route-userId="@item.UserId" asp-route-time="@item.Time">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

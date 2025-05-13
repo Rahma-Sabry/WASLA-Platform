@@ -1,0 +1,61 @@
+﻿@model Wasla.Models.CoinHistory
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create Coin History</h1>
+<hr />
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <!-- User dropdown -->
+    <div class="form-group">
+        <label asp-for="UserId" class="control-label"></label>
+        <select asp-for="UserId"
+                class="form-control"
+                asp-items="ViewBag.UserId">
+            <option value="">-- Select User --</option>
+        </select>
+        <span asp-validation-for="UserId" class="text-danger"></span>
+    </div>
+
+    <!-- Time input -->
+    <div class="form-group">
+        <label asp-for="Time" class="control-label">Time</label>
+        <input asp-for="Time" class="form-control" type="datetime-local" />
+        <span asp-validation-for="Time" class="text-danger"></span>
+    </div>
+
+    <!-- ProcessType dropdown -->
+    <div class="form-group">
+        <label asp-for="ProcessTypeId" class="control-label">Process Type</label>
+        <select asp-for="ProcessTypeId"
+                class="form-control"
+                asp-items="ViewBag.ProcessTypeId">
+            <option value="">-- Select Type --</option>
+        </select>
+        <span asp-validation-for="ProcessTypeId" class="text-danger"></span>
+    </div>
+
+    <!-- Amount input -->
+    <div class="form-group">
+        <label asp-for="Amount" class="control-label">Amount</label>
+        <input asp-for="Amount" class="form-control" type="number" />
+        <span asp-validation-for="Amount" class="text-danger"></span>
+    </div>
+
+    <!-- Submit buttons -->
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
