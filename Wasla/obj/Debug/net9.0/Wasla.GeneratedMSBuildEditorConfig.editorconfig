@@ -28,20 +28,12 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/CoinHistories/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/CoinHistories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/CoinHistories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/CoinHistories/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/CoinHistories/Index.cshtml]
@@ -154,6 +146,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Jobs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/JobTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/JobTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/JobTypes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/JobTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/JobTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/ProcessTypes/Create.cshtml]

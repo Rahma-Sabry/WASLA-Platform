@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Wasla.Models
 {
@@ -26,10 +27,12 @@ namespace Wasla.Models
         public string Field { get; set; }
 
         public DateTime? ExpireDate { get; set; }
-
+        [ValidateNever]
         public Recruiter Recruiter { get; set; }
+        [ValidateNever]
 
         public JobType JobType { get; set; }
+        [ValidateNever]
 
         public ICollection<Application> Applications { get; set; }
     }

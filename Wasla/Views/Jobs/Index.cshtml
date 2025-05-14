@@ -1,71 +1,41 @@
 ﻿@model IEnumerable<Wasla.Models.Job>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Jobs";
 }
 
-<h1>Index</h1>
+<h1>Jobs</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New Job</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.JobTitle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Requirements)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Salary)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TypeId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Field)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ExpireDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Recruiter)
-            </th>
+            <th>Title</th>
+            <th>Recruiter</th>
+            <th>Type</th>
+            <th>Salary</th>
+            <th>Expires</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.JobTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Requirements)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Salary)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TypeId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Field)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExpireDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Recruiter.Email)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.JobId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.JobId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.JobId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.JobTitle</td>
+                <td>@item.Recruiter.CompanyName</td>
+                <td>@item.JobType.TypeName</td>
+                <td>@item.Salary.ToString("C")</td>
+                <td>@item.ExpireDate?.ToString("d")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.JobId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.JobId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.JobId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

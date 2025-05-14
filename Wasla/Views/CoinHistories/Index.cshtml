@@ -1,14 +1,10 @@
 ﻿@model IEnumerable<Wasla.Models.CoinHistory>
 
 @{
-    ViewData["Title"] = "Coin History";
+    ViewData["Title"] = "Coin Histories";
 }
 
-<h1>Coin History</h1>
-
-<p>
-    <a asp-action="Create" class="btn btn-primary">Add New Entry</a>
-</p>
+<h1>Coin Histories</h1>
 
 <table class="table">
     <thead>
@@ -24,14 +20,13 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.User.FirstName @item.User.LastName</td>
+                <td>@item.User?.FullName</td>
                 <td>@item.Time.ToString("g")</td>
-                <td>@item.ProcessType.ProcessName </td>
+                <td>@item.ProcessType?.ProcessName</td>
                 <td>@item.Amount</td>
                 <td>
-                    <a asp-action="Edit" asp-route-userId="@item.UserId" asp-route-time="@item.Time">Edit</a> |
-                    <a asp-action="Details" asp-route-userId="@item.UserId" asp-route-time="@item.Time">Details</a> |
-                    <a asp-action="Delete" asp-route-userId="@item.UserId" asp-route-time="@item.Time">Delete</a>
+                    <a asp-action="Details" asp-route-UserId="@item.UserId" asp-route-Time="@item.Time">Details</a> |
+                    <a asp-action="Delete" asp-route-UserId="@item.UserId" asp-route-Time="@item.Time">Delete</a>
                 </td>
             </tr>
         }
