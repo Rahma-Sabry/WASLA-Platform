@@ -20,7 +20,7 @@ namespace Wasla.Controllers
         public async Task<IActionResult> Index()
         {
             // mimic recruiter session setup
-            HttpContext.Session.SetString("UserId", "1");
+            HttpContext.Session.SetString("UserId", "2");
             var list = _context.Set<EmployeeSkill>()
                 .Include(es => es.Employee)
                 .Include(es => es.Skill);
@@ -48,9 +48,10 @@ namespace Wasla.Controllers
         {
             // grab session for debug
             var uid = HttpContext.Session.GetString("UserId");
+            Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             Console.WriteLine("Current UserId session: " + uid);
 
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "UserId", "FirstName");
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "FirstName");
             ViewData["SkillId"] = new SelectList(_context.Skills, "SkillId", "SkillName");
             return View();
         }

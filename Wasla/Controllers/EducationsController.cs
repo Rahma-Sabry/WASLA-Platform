@@ -48,9 +48,9 @@ namespace Wasla.Controllers
         // GET: Educations/Create
         public IActionResult Create()
         {
-            HttpContext.Session.SetString("EmployeeId", "14");
+            HttpContext.Session.SetString("EmployeeId", "2");
             ViewData["DegreeId"] = new SelectList(_context.DegreeTypes, "Id", "DegreeName");
-            ViewData["EmployeeId"] = new SelectList(_context.Employees, "UserId", "FullName");
+            ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "FullName");
             return View();
         }
 
@@ -59,7 +59,7 @@ namespace Wasla.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("StartDate,UniversityName,EndDate,DegreeId")] Education education)
+        public async Task<IActionResult> Create([Bind("EmployeeId,StartDate,UniversityName,EndDate,DegreeId")] Education education)
         {
             foreach (var kv in ModelState)
             {
@@ -70,11 +70,11 @@ namespace Wasla.Controllers
             }
             if (ModelState.IsValid)
             {
-                education.EmployeeId = int.Parse(HttpContext.Session.GetString("EmployeeId"));
                 _context.Add(education);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             ViewData["DegreeId"] = new SelectList(_context.DegreeTypes, "Id", "DegreeName", education.DegreeId);
             ViewData["EmployeeId"] = new SelectList(_context.Employees, "UserId", "FullName", education.EmployeeId);
             return View(education);

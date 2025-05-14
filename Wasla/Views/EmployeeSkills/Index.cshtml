@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Wasla.Models.EmployeeSkill>
+
+@{
+    ViewData["Title"] = "Employee Skills";
+}
+
+<h1>Employee Skills</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Skill</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee</th>
+            <th>Skill</th>
+            <th>Years of Experience</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Employee.FirstName @item.Employee.LastName</td>
+                <td>@item.Skill.SkillName</td>
+                <td>@item.YOE</td>
+                <td>
+                    <a asp-action="Edit" asp-route-employeeId="@item.EmployeeId" asp-route-skillId="@item.SkillId">Edit</a> |
+                    <a asp-action="Details" asp-route-employeeId="@item.EmployeeId" asp-route-skillId="@item.SkillId">Details</a> |
+                    <a asp-action="Delete" asp-route-employeeId="@item.EmployeeId" asp-route-skillId="@item.SkillId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

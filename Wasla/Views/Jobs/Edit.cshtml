@@ -1,0 +1,67 @@
+﻿@model Wasla.Models.Job
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Job</h1>
+<hr />
+
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="JobId" />
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="RecruiterId" class="control-label"></label>
+        <select asp-for="RecruiterId" class="form-control" asp-items="ViewBag.RecruiterId"></select>
+        <span asp-validation-for="RecruiterId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="JobTitle" class="control-label"></label>
+        <input asp-for="JobTitle" class="form-control" />
+        <span asp-validation-for="JobTitle" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Requirements" class="control-label"></label>
+        <textarea asp-for="Requirements" class="form-control"></textarea>
+        <span asp-validation-for="Requirements" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Salary" class="control-label"></label>
+        <input asp-for="Salary" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="Salary" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TypeId" class="control-label"></label>
+        <select asp-for="TypeId" class="form-control" asp-items="ViewBag.TypeId"></select>
+        <span asp-validation-for="TypeId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Field" class="control-label"></label>
+        <input asp-for="Field" class="form-control" />
+        <span asp-validation-for="Field" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ExpireDate" class="control-label"></label>
+        <input asp-for="ExpireDate" class="form-control" type="date" />
+        <span asp-validation-for="ExpireDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
