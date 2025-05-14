@@ -34,7 +34,7 @@ namespace Wasla.Controllers
             }
 
             var recruiter = await _context.Recruiters
-                .FirstOrDefaultAsync(m => m.UserId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (recruiter == null)
             {
                 return NotFound();
@@ -46,8 +46,6 @@ namespace Wasla.Controllers
         // GET: Recruiter/Create
         public IActionResult Create()
         {
-            String name = HttpContext.Session.GetString("UserId");
-            Console.WriteLine("name is " + name);
             return View();
         }
 
@@ -127,12 +125,12 @@ namespace Wasla.Controllers
         //    return View(recruiter);
         //}
         // GET: Users/Edit/5
-        public async Task<IActionResult> Edit(int id)
+        public async Task<IActionResult> Edit(int? id)
         {
             var user = await _context.Users.FindAsync(id);
             if (user == null)
                 return NotFound();
-            user.ValidatePassword = user.Password;
+            //user.ValidatePassword = user.Password;
 
             return View(user);
         }
@@ -152,7 +150,7 @@ namespace Wasla.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!_context.Users.Any(u => u.UserId == user.UserId))
+                    if (!_context.Users.Any(u => u.Id == user.Id))
                         return NotFound();
                     else
                         throw;
@@ -171,7 +169,7 @@ namespace Wasla.Controllers
             }
 
             var recruiter = await _context.Recruiters
-                .FirstOrDefaultAsync(m => m.UserId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (recruiter == null)
             {
                 return NotFound();
@@ -183,7 +181,7 @@ namespace Wasla.Controllers
         // POST: Recruiter/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int? id)
         {
             var recruiter = await _context.Recruiters.FindAsync(id);
             if (recruiter != null)
@@ -197,7 +195,7 @@ namespace Wasla.Controllers
 
         private bool RecruiterExists(int id)
         {
-            return _context.Recruiters.Any(e => e.UserId == id);
+            return _context.Recruiters.Any(e => e.Id == id);
         }
     }
 }

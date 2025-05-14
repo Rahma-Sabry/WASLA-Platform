@@ -22,6 +22,7 @@ namespace Wasla.Models
         public DbSet<JobType> JobTypes { get; set; }
         public DbSet<ProcessType> ProcessTypes { get; set; }
         public DbSet<ApplicationStatus> ApplicationStatuses { get; set; }
+        public DbSet<EmployeeSkill> EmployeeSkills { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

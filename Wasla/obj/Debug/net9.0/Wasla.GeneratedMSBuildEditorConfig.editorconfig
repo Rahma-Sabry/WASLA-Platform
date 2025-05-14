@@ -17,249 +17,53 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Wasla
 build_property.RootNamespace = Wasla
-build_property.ProjectDir = C:\Users\Mariam Refaiy\Desktop\waslaeWED\Wasla\
+build_property.ProjectDir = C:\Users\p c\source\repos\Wasla\Wasla\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Mariam Refaiy\Desktop\waslaeWED\Wasla
+build_property.MSBuildProjectDirectory = C:\Users\p c\source\repos\Wasla\Wasla
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/CoinHistories/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xEZWxldGUuY3NodG1s
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Accounts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/CoinHistories/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xEZXRhaWxzLmNzaHRtbA==
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Accounts/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/CoinHistories/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Degree/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVncmVlXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Degree/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVncmVlXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Degree/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVncmVlXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Degree/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVncmVlXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Degree/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVncmVlXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Educations/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0aW9uc1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Educations/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0aW9uc1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Educations/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0aW9uc1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Educations/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0aW9uc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Educations/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0aW9uc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/EmployeeSkills/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/EmployeeSkills/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/EmployeeSkills/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/EmployeeSkills/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/EmployeeSkills/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Employees/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Employees/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Employees/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Employees/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Employees/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Employees/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Home/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Home/Privacy.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Jobs/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Jobs/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Jobs/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Jobs/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Jobs/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/JobTypes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/JobTypes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/JobTypes/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/JobTypes/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/JobTypes/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/ProcessTypes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc1R5cGVzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/ProcessTypes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc1R5cGVzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/ProcessTypes/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc1R5cGVzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/ProcessTypes/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc1R5cGVzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/ProcessTypes/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc1R5cGVzXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Recruiters/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyc1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Recruiters/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyc1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Recruiters/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyc1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Recruiters/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Recruiters/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Shared/Error.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Skills/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Skills/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Skills/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Skills/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Skills/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Users/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Users/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Users/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Users/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/_ViewImports.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/_ViewStart.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Mariam Refaiy/Desktop/waslaeWED/Wasla/Views/Shared/_Layout.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4uv486j0ih

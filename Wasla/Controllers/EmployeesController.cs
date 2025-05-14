@@ -34,7 +34,7 @@ namespace Wasla.Controllers
             }
 
             var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.UserId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (employee == null)
             {
                 return NotFound();
@@ -93,9 +93,9 @@ namespace Wasla.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Resume,CoverLetter,UserId,FirstName,LastName,Email,SSN,Phone,Password,ValidatePassword,DateOfBirth,Coins")] Employee employee)
+        public async Task<IActionResult> Edit(int? id, [Bind("Resume,CoverLetter,UserId,FirstName,LastName,Email,SSN,Phone,Password,ValidatePassword,DateOfBirth,Coins")] Employee employee)
         {
-            if (id != employee.UserId)
+            if (employee.Id != id)
             {
                 return NotFound();
             }
@@ -109,7 +109,7 @@ namespace Wasla.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EmployeeExists(employee.UserId))
+                    if (!EmployeeExists(employee.Id))
                     {
                         return NotFound();
                     }
@@ -132,7 +132,7 @@ namespace Wasla.Controllers
             }
 
             var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.UserId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (employee == null)
             {
                 return NotFound();
@@ -144,7 +144,7 @@ namespace Wasla.Controllers
         // POST: Employees/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int? id)
         {
             var employee = await _context.Employees.FindAsync(id);
             if (employee != null)
@@ -158,7 +158,7 @@ namespace Wasla.Controllers
 
         private bool EmployeeExists(int id)
         {
-            return _context.Employees.Any(e => e.UserId == id);
+            return _context.Employees.Any(e => e.Id == id);
         }
     }
 }

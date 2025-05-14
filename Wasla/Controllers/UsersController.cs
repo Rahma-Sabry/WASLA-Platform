@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Specialized;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Wasla.Models;
 
@@ -16,6 +17,7 @@ namespace WaslaHiringPlatform.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
+            Console.WriteLine("======================================================================");
             var users = await _context.Users.ToListAsync();
             return View(users);
         }
@@ -67,7 +69,7 @@ namespace WaslaHiringPlatform.Controllers
             var user = await _context.Users.FindAsync(id);
             if (user == null)
                 return NotFound();
-            user.ValidatePassword = user.Password;
+            //user.ValidatePassword = user.Password;
 
             return View(user);
         }
@@ -87,7 +89,7 @@ namespace WaslaHiringPlatform.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!_context.Users.Any(u => u.UserId == user.UserId))
+                    if (!_context.Users.Any(u => u.Id.Equals(user.Id)))
                         return NotFound();
                     else
                         throw;
@@ -99,7 +101,7 @@ namespace WaslaHiringPlatform.Controllers
 
 
         // GIT: Users/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(string? id)
         {
             if (id == null)
             {
@@ -107,7 +109,7 @@ namespace WaslaHiringPlatform.Controllers
             }
 
             var recruiter = await _context.Recruiters
-                .FirstOrDefaultAsync(m => m.UserId == id);
+                .FirstOrDefaultAsync(m => m.Id.Equals(id));
             if (recruiter == null)
             {
                 return NotFound();
@@ -119,7 +121,7 @@ namespace WaslaHiringPlatform.Controllers
         // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(string? id)
         {
             var user = await _context.Users.FindAsync(id);
             if (user != null)
@@ -133,7 +135,7 @@ namespace WaslaHiringPlatform.Controllers
 
         private bool UsersExists(int id)
         {
-            return _context.Users.Any(e => e.UserId == id);
+            return _context.Users.Any(e => e.Id.Equals(id));
         }
     }
 }
