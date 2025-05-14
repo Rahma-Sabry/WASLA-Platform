@@ -29,6 +29,11 @@ namespace Wasla.Models
         [Display(Name = "Phone Number")]
         public string? PhoneNumber { get; set; }
 
+        [Required(ErrorMessage = "Date of birth is required.")]
+        [DataType(DataType.Date)]
+        [Display(Name = "Birth Date")]
+        public DateTime DateOfBirth { get; set; }
+
 
         [Display(Name = "Email Address")]
         [Required(ErrorMessage = "Please Provide Mail")]

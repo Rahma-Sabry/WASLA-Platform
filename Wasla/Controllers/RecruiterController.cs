@@ -53,7 +53,7 @@ namespace Wasla.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CompanyName,CompanyDesc,FirstName,LastName,Email,SSN,Phone,Password,ValidatePassword,DateOfBirth,Coins")] Recruiter recruiter)
+        public async Task<IActionResult> Create([Bind("CompanyName,CompanyDesc,Id,FirstName,LastName,SSN,DateOfBirth")] Recruiter recruiter)
         {
             foreach (var kv in ModelState)
             {
@@ -65,11 +65,11 @@ namespace Wasla.Controllers
 
             if (ModelState.IsValid)    //we changed from ModelState.IsValid (didn't valid model)to !ModelState.IsValid (this work)
             {
-                //recruiter.UserId = int.Parse(HttpContext.Session.GetString("UserId"));
                 _context.Add(recruiter);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             return View(recruiter);
         }
 

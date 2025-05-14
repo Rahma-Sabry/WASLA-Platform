@@ -10,6 +10,7 @@ namespace Wasla.Models
         public string? Resume { get; set; }
 
         [Url]
+        [Display(Name = "Cover Letter")]
         public string? CoverLetter { get; set; }
 
         public ICollection<Education>? EducationRecords { get; set; }

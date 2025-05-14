@@ -69,14 +69,21 @@ namespace Wasla.Controllers
                 
                 var roleResult = await roleManager.CreateAsync(role);
                 await userManager.AddToRoleAsync(newUser, role.Name);
+                var data = new
+                {
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    SSN = model.SSN,
+                    DateOfBirth = model.DateOfBirth.ToString("yyyy-MM-dd")
+                };
 
                 if (model.isRecruiter)
                 {
-                    return RedirectToAction("Create", "Recruiters");
+                    return RedirectToAction("Create", "Recruiters", data);
                 }
                 else
                 {
-                    return RedirectToAction("Create", "Employees");
+                    return RedirectToAction("Create", "Employees", data);
                 }
             }
             ModelState.AddModelError("", "Invalid Register Steps");

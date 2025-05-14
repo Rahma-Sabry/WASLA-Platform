@@ -1,26 +1,16 @@
 ﻿@model Wasla.Models.Employee
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
-@{
-    var dobString = Context.Request.Query["DateOfBirth"].ToString();
-    DateTime? dob = null;
-
-    if (DateTime.TryParse(dobString, out var parsedDob))
-    {
-        dob = parsedDob;
-    }
-}
-
-<h1>Create</h1>
+<h1>Edit</h1>
 
 <h4>Employee</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Resume" class="control-label"></label>
@@ -32,29 +22,29 @@
                 <input asp-for="CoverLetter" class="form-control" />
                 <span asp-validation-for="CoverLetter" class="text-danger"></span>
             </div>
-            <div class="form-group" style="display: none">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
                 <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" value="@Context.Request.Query["FirstName"]" class="form-control"/>
+                <input asp-for="FirstName" class="form-control" />
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
-            <div class="form-group" style="display: none">
+            <div class="form-group">
                 <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" value="@Context.Request.Query["LastName"]" class="form-control" />
+                <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
-            <div class="form-group" style="display: none">
+            <div class="form-group">
                 <label asp-for="SSN" class="control-label"></label>
-                <input asp-for="SSN" value="@Context.Request.Query["SSN"]" class="form-control" />
+                <input asp-for="SSN" class="form-control" />
                 <span asp-validation-for="SSN" class="text-danger"></span>
             </div>
-            <div class="form-group" style="display: none">
+            <div class="form-group">
                 <label asp-for="DateOfBirth" class="control-label"></label>
-                <input asp-for="DateOfBirth" value="@(dob?.ToString("yyyy-MM-dd"))" class="form-control" />
+                <input asp-for="DateOfBirth" class="form-control" />
                 <span asp-validation-for="DateOfBirth" class="text-danger"></span>
             </div>
-            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>

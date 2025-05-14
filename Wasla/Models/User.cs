@@ -11,10 +11,12 @@ namespace Wasla.Models
 
         
         [StringLength(maximumLength: 15)]
+        [Display(Name = "First Name")]
         public string? FirstName { get; set; }
 
 
         [StringLength(maximumLength: 15)]
+        [Display(Name = "Last Name")]
         public string? LastName { get; set; }
 
         [NotMapped]
@@ -22,10 +24,11 @@ namespace Wasla.Models
         public string FullName => FirstName + " " + LastName;
 
         [StringLength(maximumLength: 15)]
+        [Display(Name = "Identity Number")]
         public string? SSN { get; set; }
 
-        [Required(ErrorMessage = "Date of birth is required.")]
         [DataType(DataType.Date)]
+        [Display(Name = "Birth Date")]
         public DateTime DateOfBirth { get; set; }
 
         [NotMapped]

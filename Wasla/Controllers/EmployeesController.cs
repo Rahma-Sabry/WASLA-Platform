@@ -54,7 +54,7 @@ namespace Wasla.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Resume,CoverLetter,UserId,FirstName,LastName,Email,SSN,Phone,Password,ValidatePassword,DateOfBirth,Coins")] Employee employee)
+        public async Task<IActionResult> Create([Bind("Resume,CoverLetter,Id,FirstName,LastName,SSN,DateOfBirth")] Employee employee)
         {
             foreach (var kv in ModelState)
             {
@@ -93,7 +93,7 @@ namespace Wasla.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, [Bind("Resume,CoverLetter,UserId,FirstName,LastName,Email,SSN,Phone,Password,ValidatePassword,DateOfBirth,Coins")] Employee employee)
+        public async Task<IActionResult> Edit(int? id, [Bind("Resume,CoverLetter,Id,FirstName,LastName,Email,SSN,DateOfBirth")] Employee employee)
         {
             if (employee.Id != id)
             {
