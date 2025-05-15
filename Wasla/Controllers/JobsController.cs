@@ -16,7 +16,7 @@ namespace Wasla.Controllers
         // GET: Jobs
         public async Task<IActionResult> Index()
         {
-            HttpContext.Session.SetString("UserId", "1");
+            HttpContext.Session.SetString("UserId", "9");
             var list = _context.Jobs
                 .Include(j => j.Recruiter)
                 .Include(j => j.JobType);
@@ -51,8 +51,6 @@ namespace Wasla.Controllers
             }
 
             Console.WriteLine("Session UserId = " + HttpContext.Session.GetString("UserId"));
-
-            ViewData["RecruiterId"] = new SelectList(_context.Recruiters.ToList(), "UserId", "CompanyName");
             ViewData["TypeId"] = new SelectList(_context.JobTypes.ToList(), "Id", "TypeName");
 
             return View();
@@ -61,9 +59,10 @@ namespace Wasla.Controllers
         // POST: Jobs/Create
         [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(
-            [Bind("RecruiterId,JobTitle,Requirements,Salary,TypeId,Field,ExpireDate")] Job job)
+            [Bind("JobTitle,Requirements,Salary,TypeId,Field,ExpireDate")] Job job)
         {
-            Console.WriteLine($"[POST Jobs/Create] hit! R={job.RecruiterId}, Title='{job.JobTitle}', Type={job.TypeId}");
+            job.RecruiterId = int.Parse(HttpContext.Session.GetString("UserId"));
+            Console.WriteLine("Session UserId = " + HttpContext.Session.GetString("UserId"));
             foreach (var kv in ModelState)
                 foreach (var err in kv.Value.Errors)
                     Console.WriteLine($"  ModelState Error → {kv.Key}: {err.ErrorMessage}");
@@ -92,16 +91,17 @@ namespace Wasla.Controllers
             var job = await _context.Jobs.FindAsync(id);
             if (job == null) return NotFound();
 
-            ViewData["RecruiterId"] = new SelectList(_context.Recruiters.ToList(), "UserId", "CompanyName", job.RecruiterId);
-            ViewData["TypeId"] = new SelectList(_context.JobTypes.ToList(), "Id", "TypeName", job.TypeId);
+            //ViewData["RecruiterId"] = new SelectList(_context.Recruiters.ToList(), "UserId", "CompanyName", job.RecruiterId);
+            ViewData["TypeId"] = new SelectList(_context.JobTypes.ToList(), "Id", "TypeName");
             return View(job);
         }
 
         // POST: Jobs/Edit/5
         [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id,
-            [Bind("JobId,RecruiterId,JobTitle,Requirements,Salary,TypeId,Field,ExpireDate")] Job job)
+            [Bind("JobId,JobTitle,Requirements,Salary,TypeId,Field,ExpireDate")] Job job)
         {
+            job.RecruiterId = int.Parse(HttpContext.Session.GetString("UserId"));
             if (id != job.JobId) return NotFound();
             foreach (var kv in ModelState)
                 foreach (var err in kv.Value.Errors)
@@ -126,8 +126,8 @@ namespace Wasla.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewData["RecruiterId"] = new SelectList(_context.Recruiters.ToList(), "UserId", "CompanyName", job.RecruiterId);
-            ViewData["TypeId"] = new SelectList(_context.JobTypes.ToList(), "Id", "TypeName", job.TypeId);
+            //ViewData["RecruiterId"] = new SelectList(_context.Recruiters.ToList(), "UserId", "CompanyName", job.RecruiterId);
+            ViewData["TypeId"] = new SelectList(_context.JobTypes.ToList(), "Id", "TypeName");
             return View(job);
         }
 

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Wasla.Models.Application>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplyDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplyDate)
+            </td>
+                <td>
+                    @item.Employee?.FullName
+                </td>
+                <td>
+                    @item.Job?.JobTitle
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { employeeId = item.EmployeeId, jobId = item.JobId }) |
+                    @Html.ActionLink("Details", "Details", new { employeeId = item.EmployeeId, jobId = item.JobId }) |
+                    @Html.ActionLink("Delete", "Delete", new { employeeId = item.EmployeeId, jobId = item.JobId })
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -11,14 +11,14 @@
     @Html.AntiForgeryToken()
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-    <!-- Recruiter -->
-    <div class="form-group">
-        <label asp-for="RecruiterId"></label>
-        <select asp-for="RecruiterId" class="form-control" asp-items="ViewBag.RecruiterId">
-            <option value="">-- Select Recruiter --</option>
-        </select>
-        <span asp-validation-for="RecruiterId" class="text-danger"></span>
-    </div>
+    @* <!-- Recruiter --> *@
+    @* <div class="form-group"> *@
+    @*     <label asp-for="RecruiterId"></label> *@
+    @*     <select asp-for="RecruiterId" class="form-control" asp-items="ViewBag.RecruiterId"> *@
+    @*         <option value="">-- Select Recruiter --</option> *@
+    @*     </select> *@
+    @*     <span asp-validation-for="RecruiterId" class="text-danger"></span> *@
+    @* </div> *@
 
     <!-- Job Title -->
     <div class="form-group">

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Wasla.Models
 {
@@ -12,8 +13,10 @@ namespace Wasla.Models
 
         public DateTime ApplyDate { get; set; } = DateTime.Now;
 
+        [ValidateNever]
         public Employee Employee { get; set; }
 
+        [ValidateNever]
         public Job Job { get; set; }
     }
 

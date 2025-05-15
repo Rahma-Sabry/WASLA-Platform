@@ -1,0 +1,36 @@
+﻿@model Wasla.Models.Application
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Application</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ApplyDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ApplyDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Employee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.Employee?.FullName
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Job)
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.Job?.JobTitle
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { employeeId = Model.EmployeeId, jobId = Model.JobId }) |
+    <a asp-action="Index">Back to List</a>
+</div>

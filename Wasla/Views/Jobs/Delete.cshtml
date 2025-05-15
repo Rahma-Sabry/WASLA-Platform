@@ -30,7 +30,8 @@
     <dd class="col-sm-10">@Model.ExpireDate?.ToString("d")</dd>
 </dl>
 
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.JobId" class="btn btn-primary">Edit</a>
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
-</div>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="JobId" />
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+    <a asp-action="Index">Back to List</a>
+</form>

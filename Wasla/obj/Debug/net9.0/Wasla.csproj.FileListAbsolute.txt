@@ -2390,3 +2390,8 @@ C:\Users\p c\source\repos\Wasla\Wasla\bin\Debug\net9.0\Microsoft.AspNetCore.Cryp
 C:\Users\p c\source\repos\Wasla\Wasla\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\p c\source\repos\Wasla\Wasla\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\p c\source\repos\Wasla\Wasla\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\رحمه صبرى\Source\Repos\WASLA-Platform\Wasla\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\رحمه صبرى\Source\Repos\WASLA-Platform\Wasla\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\رحمه صبرى\Source\Repos\WASLA-Platform\Wasla\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\رحمه صبرى\Source\Repos\WASLA-Platform\Wasla\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\رحمه صبرى\Source\Repos\WASLA-Platform\Wasla\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
