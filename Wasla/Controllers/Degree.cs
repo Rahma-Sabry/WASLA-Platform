@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Wasla.Models;
 
 namespace Wasla.Controllers
 {
+    //[Authorize("Admin")]
     public class DegreeController : Controller
     {
         private readonly WaslaContext _context;

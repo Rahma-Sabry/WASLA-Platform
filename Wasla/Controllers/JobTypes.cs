@@ -20,7 +20,8 @@ namespace Wasla.Controllers
         // GET: JobTypes
         public async Task<IActionResult> Index()
         {
-            HttpContext.Session.SetString("UserId", "1");
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
+            HttpContext.Session.SetString("UserId", user.Id.ToString());
             return View(await _context.JobTypes.ToListAsync());
         }
 

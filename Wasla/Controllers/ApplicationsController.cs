@@ -9,6 +9,7 @@ using Wasla.Models;
 
 namespace Wasla.Controllers
 {
+    
     public class ApplicationsController : Controller
     {
         private readonly WaslaContext _context;
@@ -21,7 +22,8 @@ namespace Wasla.Controllers
         // GET: Applications
         public async Task<IActionResult> Index()
         {
-            HttpContext.Session.SetString("userId","3");
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
+            HttpContext.Session.SetString("UserId", user.Id.ToString());
             var waslaContext = _context.Applies.Include(a => a.Employee).Include(a => a.Job);
             return View(await waslaContext.ToListAsync());
         }
@@ -45,8 +47,7 @@ namespace Wasla.Controllers
         // GET: Applications/Create
         public IActionResult Create()
         {
-            var jobs = _context.Jobs.ToList(); 
-            HttpContext.Session.SetString("userId", "5");
+            var jobs = _context.Jobs.ToList();
             ViewData["JobId"] = new SelectList(jobs, "JobId", "JobTitle");
             return View();
         }
@@ -58,7 +59,7 @@ namespace Wasla.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("JobId,ApplyDate")] Application application)
         {
-            application.EmployeeId = int.Parse(HttpContext.Session.GetString("userId"));
+            application.EmployeeId = int.Parse(HttpContext.Session.GetString("UserId"));
             
             if (ModelState.IsValid)
             {

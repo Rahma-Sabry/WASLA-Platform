@@ -21,8 +21,9 @@ namespace Wasla.Controllers
         // GET: Educations
         public async Task<IActionResult> Index()
         {
-            HttpContext.Session.SetString("EmployeeId", "14");
-            var waslaContext = _context.Education.Include(e => e.DegreeType).Include(e => e.Employee);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
+            HttpContext.Session.SetString("UserId", user.Id.ToString());
+            var waslaContext = _context.Education.Where(e => e.EmployeeId == user.Id).Include(e => e.DegreeType).Include(e => e.Employee);
 
             return View(await waslaContext.ToListAsync());
         }
@@ -30,7 +31,6 @@ namespace Wasla.Controllers
         // GET: Educations/Create
         public IActionResult Create()
         {
-            HttpContext.Session.SetString("EmployeeId", "2");
             ViewData["DegreeId"] = new SelectList(_context.DegreeTypes, "Id", "DegreeName");
             ViewData["EmployeeId"] = new SelectList(_context.Employees, "Id", "FullName");
             return View();

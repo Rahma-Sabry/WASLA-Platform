@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Wasla.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +15,15 @@ builder.Services.AddDbContext<WaslaContext>(options => options.UseSqlServer(conn
 builder.Services.AddDbContext<WaslaSecurityContext>(options =>  options.UseSqlServer(connectionString));
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<WaslaSecurityContext>();
-builder.Services.AddDistributedMemoryCache(); // For storing session in memory
+
+builder.Services.ConfigureApplicationCookie(
+    options =>
+    {
+        options.LoginPath = "/Accounts/Login";
+        options.AccessDeniedPath = "/Accounts/AccessDenied";
+    });
+
+builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(20);

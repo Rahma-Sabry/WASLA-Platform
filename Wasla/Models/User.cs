@@ -23,6 +23,10 @@ namespace Wasla.Models
         [Display(Name = "Full Name")]
         public string FullName => FirstName + " " + LastName;
 
+        [Display(Name = "Email")]
+        [EmailAddress]
+        public string? Email { get; set; }
+
         [StringLength(maximumLength: 15)]
         [Display(Name = "Identity Number")]
         public string? SSN { get; set; }

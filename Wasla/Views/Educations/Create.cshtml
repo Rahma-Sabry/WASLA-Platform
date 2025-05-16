@@ -14,7 +14,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
              <div class="form-group">
                  <label asp-for="EmployeeId" class="control-label">Employee</label>
-                <input asp-for="EmployeeId" value="@Context.Session.GetString("EmployeeId")" class="form-control" />
+                <input asp-for="EmployeeId" value="@Context.Session.GetString("UserId")" class="form-control" />
              </div>
             <div class="form-group">
                 <label asp-for="StartDate" class="control-label"></label>

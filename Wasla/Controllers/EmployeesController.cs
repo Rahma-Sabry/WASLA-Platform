@@ -22,7 +22,8 @@ namespace Wasla.Controllers
         // GET: Employees
         public async Task<IActionResult> Index()
         {
-            HttpContext.Session.SetString("UserId", "1");
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
+            HttpContext.Session.SetString("UserId", user.Id.ToString());
             return View(await _context.Employees.ToListAsync());
         }
 
@@ -55,7 +56,7 @@ namespace Wasla.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Resume,CoverLetter,Id,FirstName,LastName,SSN,DateOfBirth")] Employee employee)
+        public async Task<IActionResult> Create([Bind("Resume,CoverLetter,Id,FirstName,LastName,Email,SSN,DateOfBirth")] Employee employee)
         {
             foreach (var kv in ModelState)
             {
@@ -66,7 +67,6 @@ namespace Wasla.Controllers
             }
             if (ModelState.IsValid)
             {
-                HttpContext.Session.SetString("userId", employee.Id.ToString());
                 _context.Add(employee);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

@@ -7847,23 +7847,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\رحمه صبرى\\.nuget\\packages\\": {},
+    "C:\\Users\\p c\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\رحمه صبرى\\Source\\Repos\\WASLA-Platform\\Wasla\\Wasla.csproj",
+      "projectUniqueName": "C:\\Users\\p c\\source\\repos\\Wasla\\Wasla\\Wasla.csproj",
       "projectName": "Wasla",
-      "projectPath": "C:\\Users\\رحمه صبرى\\Source\\Repos\\WASLA-Platform\\Wasla\\Wasla.csproj",
-      "packagesPath": "C:\\Users\\رحمه صبرى\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\رحمه صبرى\\Source\\Repos\\WASLA-Platform\\Wasla\\obj\\",
+      "projectPath": "C:\\Users\\p c\\source\\repos\\Wasla\\Wasla\\Wasla.csproj",
+      "packagesPath": "C:\\Users\\p c\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\p c\\source\\repos\\Wasla\\Wasla\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\رحمه صبرى\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\p c\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7888,9 +7888,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0": {
@@ -7938,16 +7938,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\رحمه صبرى\\Source\\Repos\\WASLA-Platform\\Wasla\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

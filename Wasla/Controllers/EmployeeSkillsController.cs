@@ -20,7 +20,8 @@ namespace Wasla.Controllers
         public async Task<IActionResult> Index()
         {
             // mimic recruiter session setup
-            HttpContext.Session.SetString("UserId", "2");
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
+            HttpContext.Session.SetString("UserId", user.Id.ToString());
             var list = _context.Set<EmployeeSkill>()
                 .Include(es => es.Employee)
                 .Include(es => es.Skill);

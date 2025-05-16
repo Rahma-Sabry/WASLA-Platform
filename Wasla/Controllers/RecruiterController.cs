@@ -21,7 +21,8 @@ namespace Wasla.Controllers
         // GET: Recruiter
         public async Task<IActionResult> Index()
         {
-            HttpContext.Session.SetString("UserId", "1");
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
+            HttpContext.Session.SetString("UserId", user.Id.ToString());
             return View(await _context.Recruiters.ToListAsync());
         }
 
@@ -53,7 +54,7 @@ namespace Wasla.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CompanyName,CompanyDesc,Id,FirstName,LastName,SSN,DateOfBirth")] Recruiter recruiter)
+        public async Task<IActionResult> Create([Bind("CompanyName,CompanyDesc,Id,FirstName,LastName,Email,SSN,DateOfBirth")] Recruiter recruiter)
         {
             foreach (var kv in ModelState)
             {

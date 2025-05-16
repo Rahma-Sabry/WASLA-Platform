@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -16,7 +17,8 @@ namespace Wasla.Controllers
         // GET: Jobs
         public async Task<IActionResult> Index()
         {
-            HttpContext.Session.SetString("UserId", "9");
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
+            HttpContext.Session.SetString("UserId", user.Id.ToString());
             var list = _context.Jobs
                 .Include(j => j.Recruiter)
                 .Include(j => j.JobType);
@@ -36,6 +38,7 @@ namespace Wasla.Controllers
         }
 
         // GET: Jobs/Create
+        [Authorize(Roles = "Recruiter")]
         public IActionResult Create()
         {
             // optional seed of JobTypes
@@ -58,6 +61,7 @@ namespace Wasla.Controllers
 
         // POST: Jobs/Create
         [HttpPost, ValidateAntiForgeryToken]
+        [Authorize(Roles = "Recruiter")]
         public async Task<IActionResult> Create(
             [Bind("JobTitle,Requirements,Salary,TypeId,Field,ExpireDate")] Job job)
         {
@@ -85,6 +89,7 @@ namespace Wasla.Controllers
         }
 
         // GET: Jobs/Edit/5
+        [Authorize(Roles = "Recruiter")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -98,6 +103,7 @@ namespace Wasla.Controllers
 
         // POST: Jobs/Edit/5
         [HttpPost, ValidateAntiForgeryToken]
+        [Authorize(Roles ="Recruiter")]
         public async Task<IActionResult> Edit(int id,
             [Bind("JobId,JobTitle,Requirements,Salary,TypeId,Field,ExpireDate")] Job job)
         {
@@ -132,6 +138,7 @@ namespace Wasla.Controllers
         }
 
         // GET: Jobs/Delete/5
+        [Authorize(Roles = "Recruiter")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
@@ -145,6 +152,7 @@ namespace Wasla.Controllers
 
         // POST: Jobs/Delete/5
         [HttpPost, ActionName("Delete"), ValidateAntiForgeryToken]
+        [Authorize(Roles = "Recruiter")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var job = await _context.Jobs.FindAsync(id);

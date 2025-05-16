@@ -9,6 +9,7 @@ namespace Wasla.Models
 
         public WaslaSecurityContext(DbContextOptions<WaslaSecurityContext> options) : base(options) { }
         public DbSet<Wasla.Models.RegisterViewModel> RegisterViewModel { get; set; } = default!;
+        public DbSet<Wasla.Models.LoginViewModel> LoginViewModel { get; set; } = default!;
 
 
 
