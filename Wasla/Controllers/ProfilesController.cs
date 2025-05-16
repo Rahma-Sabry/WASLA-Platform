@@ -15,18 +15,24 @@ namespace Wasla.Controllers
         public async Task<IActionResult> Index()
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
-            Console.WriteLine(HttpContext.Session.GetString("Email"));
-            Console.WriteLine(user.Id);
             HttpContext.Session.SetString("ID", user.Id.ToString());
             var employee = await _context.Employees
                 .FirstOrDefaultAsync(m => m.Id == user.Id);
-            if(employee == null)
+
+            var recruiter = await _context.Recruiters
+                .FirstOrDefaultAsync(m => m.Id == user.Id);
+
+            if (employee != null)
+            {
+                return RedirectToAction("EmployeeProfile");
+            }
+            else if(recruiter != null)
             {
                 return RedirectToAction("RecuiterProfile");
             }
             else
             {
-                return RedirectToAction("EmployeeProfile");
+                return RedirectToAction("Index", "Home");
             }
         }
 

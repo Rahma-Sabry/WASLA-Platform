@@ -17,289 +17,289 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Wasla
 build_property.RootNamespace = Wasla
-build_property.ProjectDir = C:\Users\رحمه صبرى\Source\Repos\WASLA-Platform\Wasla\
+build_property.ProjectDir = C:\Users\p c\source\repos\Wasla\Wasla\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\رحمه صبرى\Source\Repos\WASLA-Platform\Wasla
+build_property.MSBuildProjectDirectory = C:\Users\p c\source\repos\Wasla\Wasla
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Accounts/AccessDenied.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Accounts/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQWNjZXNzRGVuaWVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Accounts/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Accounts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Accounts/Login.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Accounts/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Accounts/Register.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Accounts/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Applications/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Applications/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYXRpb25zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Applications/Delete.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Applications/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYXRpb25zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Applications/Details.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Applications/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYXRpb25zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Applications/Edit.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Applications/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYXRpb25zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Applications/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Applications/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwbGljYXRpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/CoinHistories/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/CoinHistories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/CoinHistories/Delete.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/CoinHistories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/CoinHistories/Details.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/CoinHistories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/CoinHistories/Edit.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/CoinHistories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/CoinHistories/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/CoinHistories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29pbkhpc3Rvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Degree/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Degree/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVncmVlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Degree/Delete.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Degree/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVncmVlXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Degree/Details.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Degree/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVncmVlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Degree/Edit.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Degree/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVncmVlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Degree/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Degree/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVncmVlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Educations/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Educations/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0aW9uc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Educations/Delete.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Educations/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0aW9uc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Educations/Details.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Educations/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0aW9uc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Educations/Edit.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Educations/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0aW9uc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Educations/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Educations/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0aW9uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/EmployeeSkills/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/EmployeeSkills/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/EmployeeSkills/Delete.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/EmployeeSkills/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/EmployeeSkills/Details.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/EmployeeSkills/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/EmployeeSkills/Edit.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/EmployeeSkills/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/EmployeeSkills/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/EmployeeSkills/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTa2lsbHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Employees/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Employees/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Employees/Delete.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Employees/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Employees/Details.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Employees/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Employees/Edit.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Employees/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Employees/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Employees/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Employees/MyProfile.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Employees/MyProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVzXE15UHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Home/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Home/Privacy.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Jobs/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Jobs/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Jobs/Delete.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Jobs/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Jobs/Details.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Jobs/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Jobs/Edit.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Jobs/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Jobs/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Jobs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9ic1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/JobTypes/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/JobTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/JobTypes/Delete.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/JobTypes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/JobTypes/Details.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/JobTypes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/JobTypes/Edit.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/JobTypes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/JobTypes/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/JobTypes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iVHlwZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/ProcessTypes/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/ProcessTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc1R5cGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/ProcessTypes/Delete.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/ProcessTypes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc1R5cGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/ProcessTypes/Details.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/ProcessTypes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc1R5cGVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/ProcessTypes/Edit.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/ProcessTypes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc1R5cGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/ProcessTypes/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/ProcessTypes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2Vzc1R5cGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Profiles/EmployeeProfile.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Profiles/EmployeeProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZXNcRW1wbG95ZWVQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Profiles/RecuiterProfile.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Profiles/RecuiterProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZXNcUmVjdWl0ZXJQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Recruiters/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Recruiters/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Recruiters/Delete.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Recruiters/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Recruiters/Details.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Recruiters/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Recruiters/Edit.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Recruiters/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Recruiters/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Recruiters/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjcnVpdGVyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Shared/Error.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Skills/Create.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Skills/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Skills/Delete.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Skills/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Skills/Details.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Skills/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Skills/Edit.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Skills/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Skills/Index.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Skills/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/_ViewImports.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/_ViewStart.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/رحمه صبرى/Source/Repos/WASLA-Platform/Wasla/Views/Shared/_Layout.cshtml]
+[C:/Users/p c/source/repos/Wasla/Wasla/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4uv486j0ih

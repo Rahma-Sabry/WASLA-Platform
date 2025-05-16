@@ -1,7 +1,14 @@
-﻿
-@{
-    ViewData["Title"] = "AccessDenied";
+﻿@{
+    ViewData["Title"] = "Access Denied";
 }
 
-<h1>AccessDenied</h1>
-
+<div class="container d-flex justify-content-center align-items-center" style="height: 80vh;">
+    <div class="text-center">
+        <i class="bi bi-shield-lock-fill text-danger" style="font-size: 4rem;"></i>
+        <h1 class="mt-3 text-danger">Access Denied</h1>
+        <p class="lead">You do not have permission to access this page.</p>
+        <a href="~/Jobs/Index" class="btn btn-primary mt-3">
+            <i class="bi bi-house-door-fill"></i> Go to Jobs
+        </a>
+    </div>
+</div>

@@ -55,42 +55,27 @@
 
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
 
-                        <!-- Entities Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Entities</a>
-                            <ul class="dropdown-menu bg-light">
-                                <li><a class="dropdown-item" asp-controller="Employees" asp-action="Index">Employees</a></li>
-                                <li><a class="dropdown-item" asp-controller="Recruiters" asp-action="Index">Recruiters</a></li>
-                                <li><a class="dropdown-item" asp-controller="Jobs" asp-action="Index">Jobs</a></li>
-                                <li><a class="dropdown-item" asp-controller="Educations" asp-action="Index">Educations</a></li>
-                                <li><a class="dropdown-item" asp-controller="Skills" asp-action="Index">Skills</a></li>
-                                <li><a class="dropdown-item" asp-controller="Degree" asp-action="Index">Degree</a></li>
-                                <li><a class="dropdown-item" asp-controller="EmployeeSkills" asp-action="Index">Employee Skills</a></li>
-                                <li><a class="dropdown-item" asp-controller="Applications" asp-action="Index">Applications</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Jobs" asp-action="Index">Jobs</a></li>
 
-                        <!-- Settings Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Settings</a>
-                            <ul class="dropdown-menu bg-light">
-                                <li><a class="dropdown-item" asp-controller="CoinHistories" asp-action="Index">Coin History</a></li>
-                                <li><a class="dropdown-item" asp-controller="ProcessTypes" asp-action="Index">Process Types</a></li>
-                                <li><a class="dropdown-item" asp-controller="JobTypes" asp-action="Index">Job Types</a></li>
-                                @if (User.IsInRole("Admin"))
-                                {
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" asp-controller="Accounts" asp-action="Index">Accounts</a></li>
-                                }
-                            </ul>
-                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item"><a class="nav-link" asp-controller="Employees" asp-action="Index">Employees</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Recruiters" asp-action="Index">Recruiters</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Jobs" asp-action="Index">Jobs</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Educations" asp-action="Index">Educations</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Skills" asp-action="Index">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Degree" asp-action="Index">Degree</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="EmployeeSkills" asp-action="Index">Employee Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Applications" asp-action="Index">Applications</a></li>
+
+                            <!-- Flattened Settings Links -->
+                            <li class="nav-item"><a class="nav-link" asp-controller="CoinHistories" asp-action="Index">Coin History</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="ProcessTypes" asp-action="Index">Process Types</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="JobTypes" asp-action="Index">Job Types</a></li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Accounts" asp-action="Index">Accounts</a></li>
+                        }
+
                     </ul>
 
                     <!-- Auth Links -->
@@ -98,10 +83,22 @@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <span class="navbar-text me-3">
-                                    <i class="bi bi-person-circle"></i> <span class="badge bg-warning text-dark">@User.Identity.Name</span>
-                                </span>
+                                @if (User.IsInRole("Employee"))
+                                {
+                                    <a asp-controller="Profiles" asp-action="EmployeeProfile" class="nav-link text-warning">
+                                        <i class="bi bi-person-circle"></i>
+                                        <span class="badge bg-warning text-dark">@User.Identity.Name</span>
+                                    </a>
+                                }
+                                else if (User.IsInRole("Recruiter"))
+                                {
+                                    <a asp-controller="Profiles" asp-action="RecuiterProfile" class="nav-link text-warning">
+                                        <i class="bi bi-person-circle"></i>
+                                        <span class="badge bg-warning text-dark">@User.Identity.Name</span>
+                                    </a>
+                                }
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" asp-controller="Accounts" asp-action="Signout">
                                     <i class="bi bi-box-arrow-right"></i> Sign out

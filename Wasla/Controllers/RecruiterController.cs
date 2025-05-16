@@ -68,7 +68,7 @@ namespace Wasla.Controllers
             {
                 _context.Add(recruiter);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Login", "Accounts");
             }
             Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             return View(recruiter);

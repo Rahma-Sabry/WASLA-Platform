@@ -63,6 +63,10 @@ namespace Wasla.Controllers
             {
                 return NotFound();
             }
+            var emp = await _context.Employees.SingleOrDefaultAsync(e => e.Id == EmployeeId);
+            if (emp != null) {
+                emp.Coins -= 10;
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(application);

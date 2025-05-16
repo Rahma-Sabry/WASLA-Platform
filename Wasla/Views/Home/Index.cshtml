@@ -2,11 +2,24 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>
-        .
-       <a href="" 
-    
-    </p>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .full-page-height {
+        min-height: 75vh;
+        /* or height: 100vh; if you want fixed */
+    }
+</style>
+
+<div class="d-flex flex-column justify-content-center align-items-center full-page-height bg-light">
+    <h1 class="display-3 fw-bold text-primary mb-3">Welcome to WASLA</h1>
+    <p class="lead text-secondary fs-4">We are WASLA — Connecting Opportunities with Talent</p>
+    <hr class="w-25 my-4 border-primary" />
+    <a asp-controller="Jobs" asp-action="Index" class="btn btn-primary btn-lg px-5">
+        Explore Jobs <i class="bi bi-briefcase-fill ms-2"></i>
+    </a>
 </div>

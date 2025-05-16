@@ -4,40 +4,67 @@
     ViewData["Title"] = "Jobs";
 }
 
-<h1>Jobs</h1>
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header text-white" style="background-color: #005792;">
+            <h3 class="mb-0"><i class="bi bi-briefcase-fill"></i> Job Listings</h3>
+        </div>
+        <div class="card-body">
+            @if (User.IsInRole("Recruiter"))
+            {
+                <div class="mb-3 text-end">
+                    <a asp-action="Create" class="btn btn-warning fw-bold text-dark">
+                        <i class="bi bi-plus-circle"></i> Create New Job
+                    </a>
+                </div>
+            }
+            
+            <table class="table table-striped table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Title</th>
+                        <th>Recruiter</th>
+                        <th>Type</th>
+                        <th>Salary</th>
+                        <th>Expires</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.JobTitle</td>
+                            <td>@item.Recruiter.CompanyName</td>
+                            <td>@item.JobType.TypeName</td>
+                            <td>@item.Salary.ToString("C")</td>
+                            <td>@item.ExpireDate?.ToString("d")</td>
+                            <td class="text-end">
+                                <div class="btn-group" role="group">
+                                    <a asp-action="Details" asp-route-id="@item.JobId" class="btn btn-sm btn-outline-info">Details</a>
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Create New Job</a>
-</p>
+                                    @if (User.IsInRole("Employee"))
+                                    {
+                                        <a asp-controller="Applications"
+                                           asp-action="Create"
+                                           asp-route-EmployeeId="@Context.Session.GetString("ID")"
+                                           asp-route-JobId="@item.JobId"
+                                           class="btn btn-sm btn-primary">
+                                            Apply
+                                        </a>
+                                    }
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Recruiter</th>
-            <th>Type</th>
-            <th>Salary</th>
-            <th>Expires</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.JobTitle</td>
-                <td>@item.Recruiter.CompanyName</td>
-                <td>@item.JobType.TypeName</td>
-                <td>@item.Salary.ToString("C")</td>
-                <td>@item.ExpireDate?.ToString("d")</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.JobId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.JobId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.JobId">Delete</a>    |
-                    <a asp-controller="Applications" asp-action="Create" asp-route-EmployeeId="@Context.Session.GetString("ID")" asp-route-JobId="@item.JobId">Apply</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-<h6>@Context.Session.GetString("ID")</h6>
+                                    @if (User.IsInRole("Recruiter"))
+                                    {
+                                        <a asp-action="Edit" asp-route-id="@item.JobId" class="btn btn-sm btn-outline-primary">Edit</a>
+                                        <a asp-action="Delete" asp-route-id="@item.JobId" class="btn btn-sm btn-outline-danger">Delete</a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
