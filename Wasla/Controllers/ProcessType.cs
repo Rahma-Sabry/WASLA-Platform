@@ -19,7 +19,7 @@ namespace Wasla.Controllers
         public async Task<IActionResult> Index()
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
-            HttpContext.Session.SetString("UserId", user.Id.ToString()); HttpContext.Session.SetString("UserId", "1");
+            HttpContext.Session.SetString("UserId", user.Id.ToString());
             return View(await _context.ProcessTypes.ToListAsync());
         }
 

@@ -147,7 +147,7 @@ namespace Wasla.Controllers
                 {
                     _context.Update(user);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction("RecruiterProfile","Profiles");
                 }
                 catch (DbUpdateConcurrencyException)
                 {

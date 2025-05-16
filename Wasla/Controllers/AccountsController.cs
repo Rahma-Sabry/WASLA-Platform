@@ -110,13 +110,14 @@ namespace Wasla.Controllers
                 if (user != null)
                 {
                     HttpContext.Session.SetString("Email", user.Email);
+                    
                 }
 
-                if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
-                {
-                    return LocalRedirect(ReturnUrl);
-                }
-                return RedirectToAction("Index", "Home");
+                //if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
+                //{
+                //    return LocalRedirect(ReturnUrl);
+                //}
+                return RedirectToAction("Index", "Profiles");
             }
             ModelState.AddModelError("", "Invalid Login !!");
             return View(model);

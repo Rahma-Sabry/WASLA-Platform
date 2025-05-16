@@ -22,21 +22,25 @@ namespace Wasla.Controllers
         // GET: Employees
         public async Task<IActionResult> Index()
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
-            HttpContext.Session.SetString("UserId", user.Id.ToString());
+            //var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
+            //HttpContext.Session.SetString("UserId", user.Id.ToString());
             return View(await _context.Employees.ToListAsync());
         }
 
         // GET: Employees/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> MyProfile()
         {
-            if (id == null)
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email.Equals(HttpContext.Session.GetString("Email")));
+            HttpContext.Session.SetString("ID", user.Id.ToString());
+            var userId = int.Parse(HttpContext.Session.GetString("ID"));
+            Console.WriteLine(userId);
+            if (userId == null)
             {
                 return NotFound();
             }
 
             var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.Id == userId);
             if (employee == null)
             {
                 return NotFound();
@@ -58,18 +62,11 @@ namespace Wasla.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Resume,CoverLetter,Id,FirstName,LastName,Email,SSN,DateOfBirth")] Employee employee)
         {
-            foreach (var kv in ModelState)
-            {
-                foreach (var err in kv.Value.Errors)
-                {
-                    Console.WriteLine($"Field {kv.Key}: {err.ErrorMessage}");
-                }
-            }
             if (ModelState.IsValid)
             {
                 _context.Add(employee);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Login","Accounts");
             }
             return View(employee);
         }
@@ -120,7 +117,7 @@ namespace Wasla.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("MyProfile" ,"Employees");
             }
             return View(employee);
         }
@@ -148,6 +145,7 @@ namespace Wasla.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int? id)
         {
+            Console.WriteLine("/////////"+id);
             var employee = await _context.Employees.FindAsync(id);
             if (employee != null)
             {
@@ -155,7 +153,7 @@ namespace Wasla.Controllers
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Accounts", "Signout");
         }
 
         private bool EmployeeExists(int id)

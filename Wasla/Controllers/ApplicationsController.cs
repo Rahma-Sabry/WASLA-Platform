@@ -57,10 +57,12 @@ namespace Wasla.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("JobId,ApplyDate")] Application application)
+        public async Task<IActionResult> Create(int EmployeeId, int JobId, [Bind("EmployeeId,JobId,ApplyDate")] Application application)
         {
-            application.EmployeeId = int.Parse(HttpContext.Session.GetString("UserId"));
-            
+            if (EmployeeId != application.EmployeeId || JobId != application.JobId)
+            {
+                return NotFound();
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(application);
