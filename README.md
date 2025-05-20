@@ -61,20 +61,26 @@ This document outlines the core functionalities and workflow of the Hiring Platf
 
 ---
 
-## Backend Tables
+## Backend Data Model
 
-The platform utilizes the following key backend tables:
+### 🔹 Core Tables
+- **User** – Base table for user accounts.
+- **Recruiter** – Recruiter-specific info.
+- **Employee** – Job seeker profile.
+- **Job** – Job listings.
+- **Application** – Tracks job applications.
+- **CoinHistory** – Virtual coin economy.
+- **Feedback** – Post-hire ratings and reviews.
 
-- **Users**
-- **Employers**
-- **EmployeeProfiles**
-- **JobListings**
-- **Applications**
-- **CoinBalance / EmployerWallet**
-- **CoinPurchaseRequests**
-- **CoinTransactions**
-- **UserFeedback**
-- **Documents**
+### 🔹 Supporting Tables
+- **ApplicationHistory**
+- **ApplicationStatus**
+- **Education**
+- **Experience**
+- **Skill** / **EmployeeSkill**
+- **JobType**, **ProcessType**, **Degree**
+- **WaslaContext**, **WaslaSecurityContext**
+- **ErrorViewModel**, **DTO** (not stored in DB)
 
 ---
 
